@@ -1,0 +1,56 @@
+services:
+  backend:
+    container_name: backend
+    # platform: linux/amd64
+    build:
+      context: .
+      dockerfile: dockerfiles/backend.dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - GIT_PYTHON_REFRES=quiet
+    image: backend:v1
+    depends_on:
+      - mlflow
+
+  mlflow:
+    container_name: mlflow
+    # platform: linux/amd64
+    image: ghcr.io/mlflow/mlflow:latest
+    ports:
+      - "5001:5000"
+    volumes:
+      - mlflow_data:/mlflow # maps named volume mlflow_data into /mlflow folder
+    command:
+      [
+        "mlflow",
+        "server",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "5000",
+        "--backend-store-uri",
+        "sqlite:////mlflow/mlflow.db",
+        "--allowed-hosts",
+        "*",
+      ]
+
+  frontend:
+    container_name: frontend
+    # platform: linux/amd64
+    build:
+      context: .
+      dockerfile: dockerfiles/frontend.dockerfile
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    environment:
+      - API_URL=http://backend:8000
+    image: frontend:v1
+
+volumes:
+  mlflow_data:
