@@ -1,5 +1,5 @@
 from pypdf import PdfReader
-from rag.src.rag.backend.constants import DATA_PATH
+from rag.backend.constants import DATA_PATH
 
 def extract_text_from_pdf(path) -> str:
     reader = PdfReader(path)
@@ -19,10 +19,8 @@ def export_text_to_txt(text, export_path):
 
 
 if __name__ == "__main__":
-    example_text = extract_text_from_pdf(DATA_PATH / "fisk.pdf")
+    example_text = extract_text_from_pdf(DATA_PATH / "jd_1.pdf")
     for pdf_path in DATA_PATH.glob("*.pdf"):
         pdf_text = extract_text_from_pdf(pdf_path)
-        
         filename = f"{pdf_path.stem.casefold()}.txt"
-
         export_text_to_txt(pdf_text, DATA_PATH / filename)

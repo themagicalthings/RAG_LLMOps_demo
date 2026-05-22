@@ -1,6 +1,6 @@
-from rag.src.rag.backend.constants import DATA_PATH, VECTOR_DB_PATH
+from rag.backend.constants import DATA_PATH, VECTOR_DB_PATH
 import lancedb
-from rag.src.rag.backend.data_models import Article
+from rag.backend.data_models import Article
 from pathlib import Path
 
 
