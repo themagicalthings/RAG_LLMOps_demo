@@ -1,5 +1,5 @@
 from pypdf import PdfReader
-from llmops_project.part5.rag.backend.constants import DATA_PATH
+from rag.src.rag.backend.constants import DATA_PATH
 
 def extract_text_from_pdf(path) -> str:
     reader = PdfReader(path)

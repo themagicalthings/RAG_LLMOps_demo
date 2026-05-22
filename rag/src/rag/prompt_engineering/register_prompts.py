@@ -1,4 +1,4 @@
-from llmops_project.part5.rag.backend.constants import PROMPTS_PATH
+from rag.src.rag.backend.constants import PROMPTS_PATH
 from mlflow.genai import register_prompt
 
 

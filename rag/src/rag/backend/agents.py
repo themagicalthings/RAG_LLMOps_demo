@@ -1,7 +1,8 @@
 from pydantic_ai import Agent
-from llmops_project.part5.rag.backend.constants import VECTOR_DB_PATH, MODEL
+rag.src.rag.
+from rag.src.rag.backend.constants import VECTOR_DB_PATH, MODEL
 import lancedb
-from llmops_project.part5.rag.backend.data_models import RagResponse
+from rag.src.rag.backend.data_models import RagResponse
 from mlflow.genai import load_prompt
 import mlflow
 from pydantic_ai.usage import UsageLimits

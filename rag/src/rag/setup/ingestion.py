@@ -1,6 +1,6 @@
-from llmops_project.part5.rag.backend.constants import DATA_PATH, VECTOR_DB_PATH
+from rag.src.rag.backend.constants import DATA_PATH, VECTOR_DB_PATH
 import lancedb
-from llmops_project.part5.rag.backend.data_models import Article
+from rag.src.rag.backend.data_models import Article
 from pathlib import Path
 
 

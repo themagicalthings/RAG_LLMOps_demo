@@ -1,16 +1,25 @@
 [project]
 name = "rag"
 version = "0.1.0"
-description = "Add your description here"
+description = "End to end RAG demo project for LLMOps"
 readme = "README.md"
-authors = [
-    { name = "Vamsi", email = "thevamsithokala@gmail.com" }
-]
+authors = [{ name = "Vamsi", email = "thevamsithokala@gmail.com" }]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "ipykernel>=7.2.0",
+ "pypdf>=6.10.2",
+ "backend",
+ "frontend",
+ "litellm>=1.83.0",
+]
 
-[project.scripts]
-rag = "rag:main"
+[tool.uv.sources]
+backend = { workspace = true }
+frontend = { workspace = true }
+
+[tool.uv.workspace]
+members = ["src/rag/frontend", "src/rag/backend"]
+
 
 [build-system]
 requires = ["hatchling"]

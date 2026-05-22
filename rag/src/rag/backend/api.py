@@ -1,8 +1,8 @@
-import llmops_project.part5.rag.backend.constants as constants
+import rag.src.rag.backend.constants as constants
 from fastapi import FastAPI
-from llmops_project.part5.rag.backend.data_models import Prompt, RagResponse
-from llmops_project.part5.rag.backend.agents import bot_answer
-from llmops_project.part5.rag.backend.middleware import logging_middleware
+from rag.src.rag.backend.data_models import Prompt, RagResponse
+from rag.src.rag.backend.agents import bot_answer
+from rag.src.rag.backend.middleware import logging_middleware
 
 app = FastAPI()
 logging_middleware(app=app)

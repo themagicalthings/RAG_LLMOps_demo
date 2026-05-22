@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from lancedb.pydantic import LanceModel, Vector
 from lancedb.embeddings import get_registry
-from llmops_project.part5.rag.backend.constants import EMBEDDING_MODEL
+from rag.src.rag.backend.constants import EMBEDDING_MODEL
 from dotenv import load_dotenv
 
 load_dotenv()
