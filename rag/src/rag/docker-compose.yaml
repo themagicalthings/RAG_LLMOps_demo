@@ -11,10 +11,26 @@ services:
       - .env
     environment:
       - MLFLOW_TRACKING_URI=http://mlflow:5000
-      - GIT_PYTHON_REFRES=quiet
+      - GIT_PYTHON_REFRESH=quiet
     image: backend:v1
     depends_on:
-      - mlflow
+      prompt-init:
+        condition: service_completed_successfully
+
+  prompt-init:
+    container_name: prompt-init
+    build:
+      context: .
+      dockerfile: dockerfiles/backend.dockerfile
+    image: backend:v1
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - GIT_PYTHON_REFRESH=quiet
+    depends_on:
+      mlflow:
+        condition: service_healthy
+    command: ["uv", "run", "python", "-m", "rag.prompt_engineering.register_prompts"]
+    restart: "no"
 
   mlflow:
     container_name: mlflow
@@ -37,6 +53,12 @@ services:
         "--allowed-hosts",
         "*",
       ]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:5000/health').status==200 else 1)"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
 
   frontend:
     container_name: frontend

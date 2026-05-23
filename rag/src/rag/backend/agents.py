@@ -11,7 +11,9 @@ vector_db = lancedb.connect(uri=VECTOR_DB_PATH)
 
 rag_agent = Agent(
     model=MODEL,
-    system_prompt=load_prompt("rag_agent_system_prompt").format(max_sentences=4),
+    system_prompt=load_prompt("rag_agent_system_prompt").format(
+        num_sentences=4, max_sentences=4
+    ),
     output_type=RagResponse,
 )
 
@@ -47,11 +49,15 @@ def _retrieve(query: str, k: int) -> list[dict]:
 
 
 @mlflow.trace
-async def bot_answer(question: str):
+async def bot_answer(question: str) -> RagResponse:
     try:
         result = await rag_agent.run(
             question, usage_limits=UsageLimits(request_limit=10)
         )
         return result.output
     except Exception as e:
-        return f"agent stopped early {e}"
+        return RagResponse(
+            filename=None,
+            filepath=None,
+            answer=f"agent stopped early: {e}",
+        )

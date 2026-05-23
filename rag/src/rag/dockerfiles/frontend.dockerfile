@@ -2,15 +2,14 @@ FROM python:3.13-slim
 
 WORKDIR /app/rag
 
-COPY knowledge_base knowledge_base
-COPY backend backend
+COPY frontend frontend
 
 ENV PYTHONPATH=/app
 
-RUN pip install --no-cache-dir uv 
+RUN pip install --no-cache-dir uv
 
-WORKDIR /app/rag/backend
+WORKDIR /app/rag/frontend
 
 RUN uv sync --no-dev
 
-CMD ["uv", "run", "uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uv", "run", "streamlit", "run", "app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]

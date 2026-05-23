@@ -13,8 +13,12 @@ def setup_vector_db(path):
 
 def ingest_docs_to_vector_db(table):
     for file in DATA_PATH.glob("*.txt"):
-        with open(file) as f:
+        with open(file, encoding="utf-8") as f:
             content = f.read()
+
+        if not content.strip():
+            print(f"skipping empty file: {file.name}")
+            continue
 
         document_name = file.name
         table.delete(f"document_name = '{document_name}'")

@@ -14,7 +14,7 @@ def extract_text_from_pdf(path) -> str:
     return all_text
 
 def export_text_to_txt(text, export_path):
-    with open(export_path, "w") as file:
+    with open(export_path, "w", encoding="utf-8") as file:
         file.write(text)
 
 

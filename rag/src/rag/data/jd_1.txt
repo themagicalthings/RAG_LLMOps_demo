@@ -1,0 +1,101 @@
+   
+ 
+   
+ 
+Senior Platform Engineer 
+Why this Role Matters: 
+At Greenbox Capital, we help small businesses thrive by giving them fast, accessible funding. As 
+a Senior Platform Engineer, you’ll play a key role in modernizing our origination ecosystem by 
+building scalable, high-performance platform services that power critical business workflows. 
+You’ll drive results in platform transformation, API development, and system integration, and 
+your work will directly support our growth, operational efficiency, and ability to innovate. 
+This role reports to VP of Tech and operates as an individual contributor.  
+What Success Looks Like:  
+Here’s how your time might break down (actual time can shift depending on business needs): 
+• Platform Modernization & Legacy Replacement – Reducing reliance on legacy 
+systems through scalable service development 
+• API & Integration Delivery – Building secure, reliable APIs and supporting 
+internal/external integrations 
+• Platform Reliability & Engineering Excellence – Driving code quality, observability, 
+and scalable architecture 
+How you’ll be measured:  
+Platform Modernization & Architecture Execution 
+• Deliver scalable services and components that successfully replace legacy platform 
+functionality 
+ 
+API & Integration Engineering 
+• Design and implement secure, maintainable APIs and integrations that support 
+internal systems and third-party platforms 
+ 
+Cross-Functional Collaboration & Technical Leadership 
+• Partner effectively with engineering, data, and product teams while influencing 
+architecture, standards, and delivery practices 
+You’re a Strong Fit if You:  
+• Demonstrate the ability to design and build scalable backend systems in complex, 
+data-intensive environments 
+• Have a strong ownership mindset and can operate autonomously in ambiguous 
+technical situations 
+• Collaborate effectively across engineering, product, and data teams in a distributed 
+environment 
+   
+ 
+   
+ 
+• Communicate clearly with both technical and non-technical stakeholders 
+• Bring a pragmatic approach to building vs. buying solutions and can justify trade-offs 
+• Are naturally curious, adaptable, and thrive in a fast-moving, evolving organization 
+like Greenbox 
+What You’ve Done Before:  
+• Bachelor’s degree in Computer Science, Engineering, or related field (or equivalent 
+experience) 
+• 7+ years of professional software engineering experience 
+• 5+ years building scalable backend services and APIs using Python 
+• Proven experience contributing to or leading platform modernization or migration 
+initiatives 
+• Experience working in cloud-native environments (preferably Azure) 
+• Experience designing and operating production-grade REST APIs 
+• Background in regulated industries such as FinTech, Banking, or Healthcare is a plus 
+Tools and Expertise You’ll Bring:  
+• Advanced Python (service development, testing, packaging, maintainable design) 
+• Databricks, Spark, and data platform ecosystems (required) 
+• REST API design, authentication, versioning, and error handling best practices 
+• Frameworks such as FastAPI or Flask 
+• Azure cloud services (compute, storage, networking, identity, monitoring, API 
+management) 
+• CI/CD pipelines, version control, and tooling (Azure DevOps, GitHub Actions) 
+• DevOps fundamentals including deployment pipelines and secrets management 
+• Experience with relational and NoSQL databases, event-driven architectures, and 
+asynchronous processing 
+• Nice-to-have: Vue.js or modern frontend frameworks, Streamlit, Terraform/Bicep, 
+AI-enabled application patterns, and familiarity with .NET/C# 
+What to Expect from Our Interview Process 
+We believe in a respectful, efficient, and transparent hiring experience. Here’s what you can 
+expect: 
+ 
+Step 1: Initial Phone Screen (30 minutes) 
+A brief conversation with a recruiter to learn more about your background, interests, and 
+alignment with the role. 
+Step 2: Hiring Manager Interview (1 hour) 
+A deeper discussion about the role, your relevant experience, and how you’d contribute to the 
+team. 
+   
+ 
+   
+ 
+Step 3: Role-Specific Assessment or Panel Interview (1 hour) 
+Depending on the role, this may include a take-home assignment, technical interview, or live 
+case study with team members. 
+Step 4: Final Interview or Leadership Chat (1 hour) 
+A final conversation with senior leadership or cross-functional team members to ensure 
+alignment with our mission and values. 
+Step 5: Offer & Background Check 
+If it’s a mutual fit, we’ll move forward with background check and present a competitive offer.  
+Benefits: 
+💸 Competitive Pay - We know your worth and we pay accordingly. 
+🌴 Flexible PTO - Work hard, rest well. Take the time you need to recharge. 
+🏡 Remote - Fully remote within the U.S., working Eastern Time hours to keep everyone 
+aligned. 
+🩺 Full Benefits Package - Health, dental, vision 
+🧠 Smart, Supportive Teammates - Collaborate with sharp minds who are kind, driven and 
+uphold our core values: Commitment, Communication, Teamwork, Service and Integrity! 
+ 

@@ -4,11 +4,11 @@ from mlflow.genai import register_prompt
 
 def register_prompts(**kwargs):
     for filepath in PROMPTS_PATH.glob("*.md"):
-        with open(filepath) as file:
+        with open(filepath, encoding="utf-8") as file:
             filename = filepath.stem
             prompt = file.read()
-        
-        register_prompt(name = filename, template=prompt, **kwargs)
+
+        register_prompt(name=filename, template=prompt, **kwargs)
 
 
 if __name__ == "__main__":

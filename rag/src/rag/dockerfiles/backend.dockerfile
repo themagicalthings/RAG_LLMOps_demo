@@ -4,10 +4,11 @@ WORKDIR /app/rag
 
 COPY knowledge_base knowledge_base
 COPY backend backend
+COPY prompt_engineering prompt_engineering
 
 ENV PYTHONPATH=/app
 
-RUN pip install --no-cache-dir uv 
+RUN pip install --no-cache-dir uv
 
 WORKDIR /app/rag/backend
 
