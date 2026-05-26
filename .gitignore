@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Bicep compiled artifacts (re-generated from .bicep on every build)
+infra/*.json
+infra/modules/*.json
+
 # C extensions
 *.so
 

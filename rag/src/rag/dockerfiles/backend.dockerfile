@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
 
 WORKDIR /app/rag
 
@@ -7,8 +7,6 @@ COPY backend backend
 COPY prompt_engineering prompt_engineering
 
 ENV PYTHONPATH=/app
-
-RUN pip install --no-cache-dir uv
 
 WORKDIR /app/rag/backend
 
