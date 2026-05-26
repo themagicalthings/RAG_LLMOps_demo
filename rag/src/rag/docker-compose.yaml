@@ -29,7 +29,7 @@ services:
     depends_on:
       mlflow:
         condition: service_healthy
-    command: ["uv", "run", "python", "-m", "rag.prompt_engineering.register_prompts"]
+    command: ["python", "-m", "rag.prompt_engineering.register_prompts"]
     restart: "no"
 
   mlflow:

@@ -1,4 +1,6 @@
-FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
+FROM python:3.13-slim
+
+COPY --from=ghcr.io/astral-sh/uv:0.5.4 /uv /uvx /usr/local/bin/
 
 WORKDIR /app/rag
 
@@ -10,4 +12,7 @@ WORKDIR /app/rag/frontend
 
 RUN uv sync --no-dev
 
-CMD ["uv", "run", "streamlit", "run", "app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]
+# Direct venv binaries on PATH (see backend.dockerfile for rationale).
+ENV PATH="/app/rag/frontend/.venv/bin:${PATH}"
+
+CMD ["streamlit", "run", "app.py", "--server.address", "0.0.0.0", "--server.port", "8501"]

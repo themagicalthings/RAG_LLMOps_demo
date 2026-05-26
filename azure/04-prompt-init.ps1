@@ -32,8 +32,8 @@ if (-not $jobExists) {
         --registry-username $acrUser `
         --registry-password $acrPass `
         --env-vars "MLFLOW_TRACKING_URI=$mlflowUrl" "GIT_PYTHON_REFRESH=quiet" `
-        --command "uv" `
-        --args "run" "python" "-m" "rag.prompt_engineering.register_prompts" `
+        --command "python" `
+        --args "-m" "rag.prompt_engineering.register_prompts" `
         --only-show-errors --output none
 } else {
     Write-Host "[04] Job exists, updating image + env ..." -ForegroundColor Yellow

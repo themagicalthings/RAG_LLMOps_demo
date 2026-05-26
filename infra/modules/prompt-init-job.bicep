@@ -44,10 +44,8 @@ resource job 'Microsoft.App/jobs@2024-03-01' = {
         {
           name: 'prompt-init'
           image: image
-          command: [ 'uv' ]
+          command: [ 'python' ]
           args: [
-            'run'
-            'python'
             '-m'
             'rag.prompt_engineering.register_prompts'
           ]
